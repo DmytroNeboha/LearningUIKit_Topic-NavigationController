@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Красная сцена-->
         <scene sceneID="fv4-HN-fq9">
             <objects>
-                <viewController id="kam-vW-8K7" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="redViewController" id="kam-vW-8K7" customClass="ViewController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ocA-hP-aBL">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,41 +26,36 @@
                                     <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="GD6-Bx-1Mq" kind="show" id="AWz-u6-T9w"/>
+                                    <action selector="toGreenScene:" destination="kam-vW-8K7" eventType="touchUpInside" id="wrR-LY-OZH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8g-7O-SI0">
+                                <rect key="frame" x="90" y="331" width="210" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Предыдущий экран">
+                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="toPreviousScene:" destination="kam-vW-8K7" eventType="touchUpInside" id="hhA-Yh-0fC"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xsV-zG-pTu"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="239-ai-D9r"/>
+                    <navigationItem key="navigationItem" title="Красная сцена" prompt="Дополнительная информация" id="239-ai-D9r"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4LC-TF-I5P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="884.61538461538464" y="7.8199052132701414"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="HkI-r9-wdt">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uvq-eu-bMe" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jst-BT-52I">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="kam-vW-8K7" kind="relationship" relationship="rootViewController" id="qwa-Xi-tis"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ffn-D9-4fH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="90.769230769230759" y="7.8199052132701414"/>
-        </scene>
-        <!--View Controller-->
+        <!--Зелёная сцена-->
         <scene sceneID="VXx-Th-zCY">
             <objects>
-                <viewController id="GD6-Bx-1Mq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="greenViewController" id="GD6-Bx-1Mq" customClass="ViewController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MWU-Qm-zQR">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,39 +70,118 @@
                                     <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="pyh-oX-I7A" kind="show" id="Q3U-Ah-Isu"/>
+                                    <action selector="toYellowScene:" destination="GD6-Bx-1Mq" eventType="touchUpInside" id="7oP-2x-CmN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRi-dd-g5N">
+                                <rect key="frame" x="92" y="329" width="206" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Предыдущий экран">
+                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="toPreviousScene:" destination="GD6-Bx-1Mq" eventType="touchUpInside" id="vq5-oo-27V"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lvw-MX-raP"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zAf-Zq-j9R"/>
+                    <navigationItem key="navigationItem" title="Зелёная сцена" prompt="Дополнительная информация" id="zAf-Zq-j9R">
+                        <barButtonItem key="backBarButtonItem" title="К красной" id="Ls1-l0-gcs"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAa-fR-2vu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1615" y="8"/>
+            <point key="canvasLocation" x="1613.8461538461538" y="7.8199052132701414"/>
         </scene>
-        <!--View Controller-->
+        <!--Желтая сцена-->
         <scene sceneID="uWE-9H-uaY">
             <objects>
-                <viewController id="pyh-oX-I7A" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="yellowViewController" id="pyh-oX-I7A" customClass="ViewController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j9S-1q-dxG">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZ2-Yg-X3W">
+                                <rect key="frame" x="99" y="402" width="192" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="На главный экран">
+                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="toRootScene:" destination="pyh-oX-I7A" eventType="touchUpInside" id="krC-DA-qz8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ur-Lj-ztJ">
+                                <rect key="frame" x="92" y="326" width="206" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Предыдущий экран">
+                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="toPreviousScene:" destination="pyh-oX-I7A" eventType="touchUpInside" id="1oV-xN-vtL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrh-mX-53x">
+                                <rect key="frame" x="106" y="477" width="178" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="К зеленой сцене (утечка памяти)">
+                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="toGreenScene:" destination="pyh-oX-I7A" eventType="touchUpInside" id="eOc-bO-HQQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Gfy-hR-1KE"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="z5S-1d-ruU"/>
+                    <navigationItem key="navigationItem" title="Желтая сцена" prompt="Дополнительная информация" id="z5S-1d-ruU">
+                        <barButtonItem key="backBarButtonItem" title="К зелёной" id="Eeu-yd-syR"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztd-zB-kuJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2354" y="8"/>
+            <point key="canvasLocation" x="2353.8461538461538" y="7.8199052132701414"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HkI-r9-wdt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uvq-eu-bMe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Jst-BT-52I">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kam-vW-8K7" kind="relationship" relationship="rootViewController" id="qwa-Xi-tis"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffn-D9-4fH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90.769230769230759" y="7.8199052132701414"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
